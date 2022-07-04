@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: 'Digital';
+  src: url("./font/digital-7.ttf") format('truetype'); 
+}
+
+body{
+  background: black;
+  color: white;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  user-select: none;
+}
+
+.App{
+  height: 100vh;
+  width: 400px;
+  display: grid;
+  align-content: end;
+  justify-items: center;
+  border: 1px solid darkorange;
+  /*box-shadow: 2px 50px 2px 20px rgba(190, 210, 150, .5);*/
+}
+
+#display{
+  width: 100%;
+}
+
+#input, #output{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: digital;
+  max-width: 400px;
+  height: auto;
+  padding-right: 5px;
+  margin-bottom: 5px;
+  overflow: auto;
+}
+
+#input{
+  flex-wrap: nowrap;
+  font-size: 2em;
+}
+
+#output{
+  flex-wrap: nowrap;
+  font-size: 1.5em;
+  opacity: .7;
+}
+
+#controls{
+  display: grid;
+  font-family: Share Tech Mono;
+  grid-template-columns: 2fr 1fr;
+  align-content: end;
+  width: 100%;
+}
+
+#numbers{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: end;
+  font-size: 25px;
+  font-weight: bolder;
+  height: 480px;
+}
+
+.box, .operand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(10, 14, 15);
+  height: 120px;
+}
+
+.operand{
+  background: rgb(40, 50, 50);
+  color: darkorange;
+  height: 96px;
+}
+
+@media(max-width: 400px){
+  .App{
+    width: 100vw;
+    border: none;
+  }
+   #input, #output{
+    max-width: 100%;
+  }
+}
